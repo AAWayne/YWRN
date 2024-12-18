@@ -8,7 +8,8 @@ import {
   RNOHErrorDialog,
   RNOHLogger,
   TraceJSBundleProviderDecorator,
-  RNOHCoreContext
+  RNOHCoreContext,
+  RNInstance
 } from '@rnoh/react-native-openharmony';
 import { createRNPackages } from '../RNPackagesFactory';
 
@@ -23,6 +24,7 @@ struct Index {
   @StorageLink('RNOHCoreContext') private rnohCoreContext: RNOHCoreContext | undefined = undefined
   @State shouldShow: boolean = false
   private logger!: RNOHLogger
+  private rnInstance!: RNInstance
 
   aboutToAppear() {
     this.logger = this.rnohCoreContext!.logger.clone("Index")
@@ -59,6 +61,10 @@ struct Index {
           wrappedCustomRNComponentBuilder: wrappedCustomRNComponentBuilder,
           onSetUp: (rnInstance) => {
             rnInstance.enableFeatureFlag("ENABLE_RN_INSTANCE_CLEAN_UP")
+            // 存起来备用，可用于向 RN 发送事件
+            this.rnInstance = rnInstance
+            // 原生启动RN完成
+            this.rnInstance.emitDeviceEvent("onSetUpHarmonyApp", { params: { name: 'Harmony' } })
           },
           jsBundleProvider: new TraceJSBundleProviderDecorator(
             new AnyJSBundleProvider([
