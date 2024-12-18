@@ -6,6 +6,10 @@ export default class EntryAbility extends RNAbility {
     return 'pages/Index';
   }
 
+  override getRNOHWorkerScriptUrl() {
+    return "entry/ets/workers/RNOHWorker.ets"
+  }
+
   onDestroy(): void {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onDestroy');
   }

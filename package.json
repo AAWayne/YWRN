@@ -9,14 +9,16 @@
     "start": "react-native start --config metro.config",
     "hdc": "hdc rport tcp:8081 tcp:8081",
     "test": "jest",
-    "dev": "react-native bundle-harmony --dev"
+    "dev": "react-native bundle-harmony --dev",
+    "codegen": "react-native codegen-harmony --cpp-output-path ./harmony/entry/src/main/cpp/generated --rnoh-module-path ./harmony/entry/oh_modules/@rnoh/react-native-openharmony"
   },
   "dependencies": {
     "@react-native-oh-tpl/react-native-fast-image": "^8.6.3-0.4.16",
     "@react-native-oh/react-native-harmony": "^0.72.44",
     "@react-native-oh/react-native-harmony-cli": "^0.0.27",
     "react": "18.2.0",
-    "react-native": "0.72.5"
+    "react-native": "0.72.5",
+    "rtn-native-api": "file:./libs/rtn-native-api-1.0.0.tgz"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

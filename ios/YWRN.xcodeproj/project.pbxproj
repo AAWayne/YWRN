@@ -10,8 +10,8 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2C8D1A8A0EC3F019D78AD71C /* libPods-YWRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02227513770A90C9312636D0 /* libPods-YWRN.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8CC46A2A621011D6196961A1 /* libPods-YWRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6811E4FB12D5578A28FA66D /* libPods-YWRN.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +26,16 @@
 
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* YWRNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YWRNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02227513770A90C9312636D0 /* libPods-YWRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YWRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* YWRN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YWRN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = YWRN/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = YWRN/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = YWRN/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = YWRN/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = YWRN/main.m; sourceTree = "<group>"; };
-		3AB176BE310F3E921EE0BBC5 /* Pods-YWRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YWRN.debug.xcconfig"; path = "Target Support Files/Pods-YWRN/Pods-YWRN.debug.xcconfig"; sourceTree = "<group>"; };
-		4BD05E77D04B630C7A2445F0 /* Pods-YWRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YWRN.release.xcconfig"; path = "Target Support Files/Pods-YWRN/Pods-YWRN.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = YWRN/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E6811E4FB12D5578A28FA66D /* libPods-YWRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YWRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8694442A4374218AF4C37271 /* Pods-YWRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YWRN.debug.xcconfig"; path = "Target Support Files/Pods-YWRN/Pods-YWRN.debug.xcconfig"; sourceTree = "<group>"; };
+		8EF4EE18F607293F1C110413 /* Pods-YWRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YWRN.release.xcconfig"; path = "Target Support Files/Pods-YWRN/Pods-YWRN.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CC46A2A621011D6196961A1 /* libPods-YWRN.a in Frameworks */,
+				2C8D1A8A0EC3F019D78AD71C /* libPods-YWRN.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				E6811E4FB12D5578A28FA66D /* libPods-YWRN.a */,
+				02227513770A90C9312636D0 /* libPods-YWRN.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,8 +113,8 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3AB176BE310F3E921EE0BBC5 /* Pods-YWRN.debug.xcconfig */,
-				4BD05E77D04B630C7A2445F0 /* Pods-YWRN.release.xcconfig */,
+				8694442A4374218AF4C37271 /* Pods-YWRN.debug.xcconfig */,
+				8EF4EE18F607293F1C110413 /* Pods-YWRN.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -144,14 +144,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "YWRN" */;
 			buildPhases = (
-				434A0AA82CBABEB0D368F77B /* [CP] Check Pods Manifest.lock */,
+				D10A7BD65B71FCBFBE1F7625 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				6B2D2DD0EEB0DE5C854797D8 /* [CP] Copy Pods Resources */,
-				F8188E04EB24B915616ED5CD /* [CP] Embed Pods Frameworks */,
+				C5B8DA8246862E0193FD3D05 /* [CP] Embed Pods Frameworks */,
+				4E5463AA484264F63E535AFA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,7 +234,41 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		434A0AA82CBABEB0D368F77B /* [CP] Check Pods Manifest.lock */ = {
+		4E5463AA484264F63E535AFA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YWRN/Pods-YWRN-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YWRN/Pods-YWRN-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YWRN/Pods-YWRN-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5B8DA8246862E0193FD3D05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YWRN/Pods-YWRN-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YWRN/Pods-YWRN-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YWRN/Pods-YWRN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D10A7BD65B71FCBFBE1F7625 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,40 +288,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6B2D2DD0EEB0DE5C854797D8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YWRN/Pods-YWRN-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YWRN/Pods-YWRN-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YWRN/Pods-YWRN-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F8188E04EB24B915616ED5CD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YWRN/Pods-YWRN-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YWRN/Pods-YWRN-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YWRN/Pods-YWRN-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -390,7 +390,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3AB176BE310F3E921EE0BBC5 /* Pods-YWRN.debug.xcconfig */;
+			baseConfigurationReference = 8694442A4374218AF4C37271 /* Pods-YWRN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -419,7 +419,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BD05E77D04B630C7A2445F0 /* Pods-YWRN.release.xcconfig */;
+			baseConfigurationReference = 8EF4EE18F607293F1C110413 /* Pods-YWRN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

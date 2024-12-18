@@ -31,6 +31,8 @@ import FastImage, {
   OnProgressEvent,
 } from "react-native-fast-image";
 
+import { RTNNativeApi } from "rtn-native-api";
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -81,6 +83,8 @@ function App(): JSX.Element {
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
+              alignItem: 'center',
+              justContent: 'center'
           }}>
           <FastImage
               style={{
@@ -103,21 +107,14 @@ function App(): JSX.Element {
                     e.nativeEvent.total
                 );
               }}
-              onLoad={(e: OnLoadEvent) => {
-                console.log(
-                    "onLoad: success width=" +
-                    e.nativeEvent.width +
-                    " height=" +
-                    e.nativeEvent.height
-                );
-              }}
-              onError={() => {
-                console.log("onError: success");
-              }}
-              onLoadEnd={() => {
-                console.log("onLoadEnd: success");
-              }}
           />
+
+            <Text style={{alignSelf: 'center'}}
+                  onPress={async ()  => {
+                      const value = await RTNNativeApi.method('testHsH', {key: 'sdsd'})
+                      console.log('value', value)
+                  }}
+            >点击调用</Text>
         </View>
       </ScrollView>
     </SafeAreaView>

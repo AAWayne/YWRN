@@ -1,6 +1,6 @@
-ENV['RCT_NEW_ARCH_ENABLED'] = '0'
-source 'https://github.com/CocoaPods/Specs.git'
-source 'https://github.com/goinstant/pods-specs-public'
+#ENV['RCT_NEW_ARCH_ENABLED'] = '0'
+#source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://github.com/goinstant/pods-specs-public'
 
 # Resolve react_native_pods.rb with node to allow for hoisting
 require Pod::Executable.execute_command('node', ['-p',
@@ -8,10 +8,8 @@ require Pod::Executable.execute_command('node', ['-p',
     "react-native/scripts/react_native_pods.rb",
     {paths: [process.argv[1]]},
   )', __dir__]).strip
-
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
-
 # If you are using a `react-native-flipper` your iOS build will fail when `NO_FLIPPER=1` is set.
 # because `react-native-flipper` depends on (FlipperKit,...) that will be excluded
 #
@@ -21,21 +19,16 @@ prepare_react_native_project!
 #   dependencies: {
 #     ...(process.env.NO_FLIPPER ? { 'react-native-flipper': { platforms: { ios: null } } } : {}),
 # ```
-#flipper_config = ENV['NO_FLIPPER'] == "1" ? FlipperConfiguration.disabled : FlipperConfiguration.enabled
-# 关闭 flipper_config
-
+flipper_config = ENV['NO_FLIPPER'] == "1" ? FlipperConfiguration.disabled : FlipperConfiguration.enabled
 linkage = ENV['USE_FRAMEWORKS']
 if linkage != nil
   Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
   use_frameworks! :linkage => linkage.to_sym
 end
-
 target 'YWRN' do
   config = use_native_modules!
-
   # Flags change depending on the env values.
   flags = get_default_flags()
-
   use_react_native!(
     :path => config[:reactNativePath],
     # Hermes is now enabled by default. Disable by setting this flag to false.
@@ -45,6 +38,7 @@ target 'YWRN' do
     #
     # Note that if you have use_frameworks! enabled, Flipper will not work and
     # you should disable the next line.
+    :flipper_configuration => flipper_config,
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
@@ -56,6 +50,9 @@ target 'YWRN' do
       config[:reactNativePath],
       :mac_catalyst_enabled => false
     )
+    installer.pods_project.build_configurations.each do |config|
+      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+    end
     __apply_Xcode_12_5_M1_post_install_workaround(installer)
   end
 end
